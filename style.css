@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p {
+  font-size: 0.8125rem;
+}
+/* boilerplate desing  */
+
+.testimonials {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.testimonialsitems {
+  padding: 2rem;
+  border-radius: 0.8125rem;
+  box-shadow: 0px 0px 10px hsl(0, 0%, 50%);
+}
+
+.testimonialsitems h4 {
+  padding: 1.5rem 0rem;
+  font-size: 2ch;
+}
+
+.testimonialsitems .flex .position {
+  opacity: 0.5;
+}
+
+.testimonialsitems p:last-of-type {
+  opacity: 0.7;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.flex img {
+  width: 1.75rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  outline: 3px solid hsl(267, 45%, 64%);
+}
+
+/* ^^^^^^^^^^^^ boilerplate desing  ^^^^^^^^^^^^^^^^^*/
+
+/* testimonials child design */
+
+.testimonialsitems:first-child {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
+.testimonialsitems:nth-child(2) {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(225, 9%, 34%);
+}
+
+.testimonialsitems:nth-child(3) {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.testimonialsitems:nth-child(4) {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(225, 9%, 34%);
+}
+
+.testimonialsitems:last-child {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* breakpoints  */
+
+/* meida queries for tablet */
+@media only screen and (min-width: 700px) {
+  .testimonials {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .danielarticle {
+    grid-column: span 2;
+  }
+
+  .patrickarticle {
+    grid-column: 3 / 5;
+  }
+
+  .kiraarticle {
+    grid-column: span 2;
+  }
+}
+
+/* media queries for desktop  */
+@media only screen and (min-width: 1000px) {
+  .testimonials {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .jeanettearticle {
+    grid-row: 2;
+  }
+
+  .kiraarticle {
+    grid-column: 4;
+    grid-row: span 2;
+  }
+
+  .patrickarticle {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* I made mobile first so media queries is not required */
